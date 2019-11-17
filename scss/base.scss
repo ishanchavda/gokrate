@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap');
+
+$white:#ffffff;
+$lightwhite: #fafafa;
+$lightblack: #333333;
+$green: #33AE1C;
+$blue: #2e3373;
+$popins: 'Poppins', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+.roboto-font { font-family: 'Roboto', sans-serif!important; }
+.poppins-font { font-family: 'Poppins', sans-serif!important; }
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+
+.btn-outline-primary{
+    border-color: $blue!important;
+    color: $blue;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    &:hover{
+        background-color: rgba($blue, 0.2);
+        color: $blue;
+        font-weight: 600;
+    }
+}
+
+.btn-primary{
+    background-color: rgba($blue, 0.9)!important;
+    border-color: $blue!important;
+    color: $white;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @include box-shadow( 0, 0px, 8px, rgba($white, 0.4));
+
+    &:hover{
+        background-color: $blue;
+        box-shadow: none;
+    }
+}
+
+.header-title{
+    font-size: 32px;
+    font-family: $popins;
+    padding-bottom: 20px; 
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $lightwhite;
+    color: $lightblack;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size:16px;
+    font-family: $roboto;
+}
+
+.custom-menu{
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: $lightwhite;
+    @include box-shadow( 0, 2px, 4px, rgba(0, 0, 0, 0.4));
+
+    .navbar-brand {
+        color: $blue;
+        font-size: 28px;
+        padding: 16px 0;
+        font-weight: 600;
+        line-height: 28px;
+        font-family: $popins;
+    }
+    .navbar-toggler {
+        .line{
+            width:28px; 
+            height: 2px;
+            background-color: $blue;
+            display: block;
+            margin: 5px 0; 
+        }
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                padding: 18px;
+                color: $lightblack;
+                    &.active,&:hover{
+                        background-color: rgba($blue, 0.2);
+                        color: $blue;
+                        font-weight: 600;
+                    }
+            }
+        }
+
+    }
+}
+
+.card{
+    padding: 24px 24px 30px;
+    cursor: pointer;
+
+    .img-reponsive{
+        height: 100px;
+        width: auto;
+    }
+
+    .card-title {
+        font-size: 24px;
+        text-align: center;
+        padding-top: 24px; 
+    }
+
+    p{
+        text-align: center;
+    }
+
+    &:hover{
+        @include box-shadow(0, 2px, 16px, rgba(0,0,0,0.2));
+    }
+
+}
+
+.banner-section{
+    background-image: url(../img/banner.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    max-height:900px;
+    padding-top: 60px;
+
+    .container-fluid {
+        height: 100%;
+    }
+
+    .banner-box {
+        width: 100%;
+        max-width: 700px;
+        color: $white;
+        text-align: center;
+
+        h3{
+            font-size:54px;
+            font-family: $popins;
+        }
+
+        p{
+            padding: 24px 60px 24px;
+        }
+    }
+}
+
+.work-section{
+    padding: 40px 0 20px;
+}
+.benefit-section{
+    padding: 30px 0 20px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0px;
+        height: 115%;
+        background-color: rgba($blue, 0.05);
+        transform: skewY(-3deg);
+        z-index: -1;
+
+    }
+}
+
+.package-section{
+    padding: 30px 0 20px;
+}
+.shoping-info-section{
+    padding: 30px 0 20px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0px;
+        height: 115%;
+        background-color: rgba($blue, 0.05);
+        transform: skewY(3deg);
+        z-index: -1;
+
+    }
+}
+
+footer{
+    background-color: #333;
+    color: $white;
+    padding-top:40px;
+
+    .footer-title{
+        padding-bottom: 12px; 
+    }
+    
+    p{
+        padding: 2px 0;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 2px 0;
+            a{
+                font-size: 14px;
+                color: $white;
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .link {
+        li {
+            display: inline-block;
+            a{
+                font-size: 24px;
+                margin-right: 16px;
+            }
+        }
+    }
+    .lower-footer {
+        border-top: 1px solid rgba($white, 0.4);
+        background-color: #222;
+
+        p{
+            font-size: 12px;
+            margin-bottom: 0;
+            padding: 8px 0;
+
+            a{
+                text-decoration: underline;
+                color: $white;
+            }
+        }
+        
+    }
+}

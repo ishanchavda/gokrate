@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap");
+.roboto-font {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.poppins-font {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.btn-outline-primary {
+  border-color: #2e3373 !important;
+  color: #2e3373;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(46, 51, 115, 0.2);
+  color: #2e3373;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: rgba(46, 51, 115, 0.9) !important;
+  border-color: #2e3373 !important;
+  color: #ffffff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  -webkit-box-shadow: 0 0px 8px rgba(255, 255, 255, 0.4) ;
+  box-shadow: 0 0px 8px rgba(255, 255, 255, 0.4) ;
+}
+
+.btn-primary:hover {
+  background-color: #2e3373;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.header-title {
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fafafa;
+  color: #333333;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.custom-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) ;
+}
+
+.custom-menu .navbar-brand {
+  color: #2e3373;
+  font-size: 28px;
+  padding: 16px 0;
+  font-weight: 600;
+  line-height: 28px;
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-menu .navbar-toggler .line {
+  width: 28px;
+  height: 2px;
+  background-color: #2e3373;
+  display: block;
+  margin: 5px 0;
+}
+
+.custom-menu .navbar-nav .nav-item .nav-link {
+  padding: 18px;
+  color: #333333;
+}
+
+.custom-menu .navbar-nav .nav-item .nav-link.active, .custom-menu .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(46, 51, 115, 0.2);
+  color: #2e3373;
+  font-weight: 600;
+}
+
+.card {
+  padding: 24px 24px 30px;
+  cursor: pointer;
+}
+
+.card .img-reponsive {
+  height: 100px;
+  width: auto;
+}
+
+.card .card-title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2) ;
+}
+
+.banner-section {
+  background-image: url(../img/banner.jpg);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 900px;
+  padding-top: 60px;
+}
+
+.banner-section .container-fluid {
+  height: 100%;
+}
+
+.banner-section .banner-box {
+  width: 100%;
+  max-width: 700px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.banner-section .banner-box h3 {
+  font-size: 54px;
+  font-family: "Poppins", sans-serif;
+}
+
+.banner-section .banner-box p {
+  padding: 24px 60px 24px;
+}
+
+.work-section {
+  padding: 40px 0 20px;
+}
+
+.benefit-section {
+  padding: 30px 0 20px;
+  position: relative;
+}
+
+.benefit-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0px;
+  height: 115%;
+  background-color: rgba(46, 51, 115, 0.05);
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  z-index: -1;
+}
+
+.package-section {
+  padding: 30px 0 20px;
+}
+
+.shoping-info-section {
+  padding: 30px 0 20px;
+  position: relative;
+}
+
+.shoping-info-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0px;
+  height: 115%;
+  background-color: rgba(46, 51, 115, 0.05);
+  -webkit-transform: skewY(3deg);
+          transform: skewY(3deg);
+  z-index: -1;
+}
+
+footer {
+  background-color: #333;
+  color: #ffffff;
+  padding-top: 40px;
+}
+
+footer .footer-title {
+  padding-bottom: 12px;
+}
+
+footer p {
+  padding: 2px 0;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  padding: 2px 0;
+}
+
+footer ul li a {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+footer ul li a:hover {
+  color: #ffffff;
+}
+
+footer .link li {
+  display: inline-block;
+}
+
+footer .link li a {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+footer .lower-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #222;
+}
+
+footer .lower-footer p {
+  font-size: 12px;
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+
+footer .lower-footer p a {
+  text-decoration: underline;
+  color: #ffffff;
+}
+/*# sourceMappingURL=base.css.map */
