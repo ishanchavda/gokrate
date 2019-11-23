@@ -3,8 +3,8 @@
 $white:#ffffff;
 $lightwhite: #fafafa;
 $lightblack: #333333;
+$primarycolor: #2e3373;
 $green: #33AE1C;
-$blue: #2e3373;
 $popins: 'Poppins', sans-serif;
 $roboto: 'Roboto', sans-serif;
 
@@ -19,27 +19,27 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .btn-outline-primary{
-    border-color: $blue!important;
-    color: $blue;
+    border-color: $primarycolor!important;
+    color: $primarycolor;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    &:hover{
-        background-color: rgba($blue, 0.2);
-        color: $blue;
+    &:hover,&:focus,{
+        background-color: rgba($primarycolor, 0.2);
+        color: $primarycolor;
         font-weight: 600;
     }
 }
 
 .btn-primary{
-    background-color: rgba($blue, 0.9)!important;
-    border-color: $blue!important;
+    background-color: rgba($primarycolor, 0.9)!important;
+    border-color: $primarycolor!important;
     color: $white;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     @include box-shadow( 0, 0px, 8px, rgba($white, 0.4));
 
-    &:hover{
-        background-color: $blue;
+    &:hover,&:focus,{
+        background-color: $primarycolor;
         box-shadow: none;
     }
 }
@@ -63,6 +63,7 @@ body{
     font-family: $roboto;
 }
 
+/* Navbar*/
 .custom-menu{
     padding-top: 0;
     padding-bottom: 0;
@@ -70,7 +71,7 @@ body{
     @include box-shadow( 0, 2px, 4px, rgba(0, 0, 0, 0.4));
 
     .navbar-brand {
-        color: $blue;
+        color: $primarycolor;
         font-size: 28px;
         padding: 16px 0;
         font-weight: 600;
@@ -81,7 +82,7 @@ body{
         .line{
             width:28px; 
             height: 2px;
-            background-color: $blue;
+            background-color: $primarycolor;
             display: block;
             margin: 5px 0; 
         }
@@ -92,8 +93,8 @@ body{
                 padding: 18px;
                 color: $lightblack;
                     &.active,&:hover{
-                        background-color: rgba($blue, 0.2);
-                        color: $blue;
+                        background-color: rgba($primarycolor, 0.2);
+                        color: $primarycolor;
                         font-weight: 600;
                     }
             }
@@ -102,9 +103,14 @@ body{
     }
 }
 
+/* End Navbar*/
+
+/* Home Page*/
+/* cards*/
 .card{
     padding: 24px 24px 30px;
     cursor: pointer;
+    margin-bottom: 20px;
 
     .img-reponsive{
         height: 100px;
@@ -126,7 +132,8 @@ body{
     }
 
 }
-
+/* End Card*/
+/* Banner */
 .banner-section{
     background-image: url(../img/banner.jpg);
     background-color: rgba(0, 0, 0, 0.4);
@@ -136,7 +143,6 @@ body{
     background-size: cover;
     height: 100vh;
     max-height:900px;
-    padding-top: 60px;
 
     .container-fluid {
         height: 100%;
@@ -156,14 +162,25 @@ body{
         p{
             padding: 24px 60px 24px;
         }
+
+        .learn-btn{
+            min-width: 240px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;    
+        }
     }
 }
-
-.work-section{
-    padding: 40px 0 20px;
+/* End Banner*/
+main {
+    padding-top: 80px;
 }
+.work-section{
+    padding: 32px 0 32px;
+}
+
 .benefit-section{
-    padding: 30px 0 20px;
+    padding: 32px 0 32px;
     position: relative;
     &::before{
         content: '';
@@ -171,19 +188,22 @@ body{
         left: 0;
         width: 100%;
         top: 0px;
-        height: 115%;
-        background-color: rgba($blue, 0.05);
-        transform: skewY(-3deg);
+        height: 100%;
+        background-color: rgba($primarycolor, 0.05);
         z-index: -1;
-
     }
 }
 
 .package-section{
-    padding: 30px 0 20px;
+    padding: 32px 0 32px;
+
+    .img-fluid{
+        margin-bottom: 20px;
+    }
 }
+
 .shoping-info-section{
-    padding: 30px 0 20px;
+    padding: 32px 0 32px;
     position: relative;
     &::before{
         content: '';
@@ -191,14 +211,23 @@ body{
         left: 0;
         width: 100%;
         top: 0px;
-        height: 115%;
-        background-color: rgba($blue, 0.05);
-        transform: skewY(3deg);
+        height: 100%;
+        background-color: rgba($primarycolor, 0.05);
         z-index: -1;
-
+    }
+    .row{
+        flex-wrap: wrap-reverse; 
+        
+        .img-fluid{
+            margin-bottom: 20px;
+        }
     }
 }
 
+/* End Homepage*/
+
+
+/* Footer*/
 footer{
     background-color: #333;
     color: $white;
@@ -254,3 +283,112 @@ footer{
         
     }
 }
+
+/* End Footer*/
+
+
+/* Plan Page */
+.plan-main{
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: $lightwhite;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin: 24px 0 32px;
+    cursor: pointer;
+
+    .plan-head{
+        background-color: $lightwhite;
+        margin-bottom: 20px;
+        .plan-content{
+            margin-bottom: 50px;
+            .head-bg{
+                transition: all 0.3s ease-in-out 0s;
+                -moz-transition: all 0.3s ease-in-out 0s;
+                -ms-transition: all 0.3s ease-in-out 0s;
+                -o-transition: all 0.3s ease-in-out 0s;
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                border-style: solid;
+                border-width: 90px 1411px 23px 399px;
+                position: absolute;
+                border-color: #e4e4e4 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #e4e4e4;
+            }
+            .head{
+                padding-top: 40px;
+                position: relative;
+                z-index: 1;
+                span{
+                    font-family: $popins;
+                    font-size: 28px;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                }
+            }
+
+        }
+        .price-tag{
+            padding-bottom: 20px;
+            .price{
+                display: block;
+                .sign {
+                    display: inline-block;
+                    font-size: 28px;
+                    font-weight: 400;
+                    vertical-align: middle;
+                }
+                .currency{
+                    font-size: 60px;
+                    font-weight: 300;
+                    letter-spacing: -2px;
+                    line-height: 60px;
+                    padding: 0;
+                    vertical-align: middle;
+                }
+                .sub-currency{
+                    display: inline-block;
+                    font-size: 24px;
+                    font-weight: 400;
+                    vertical-align: bottom;
+                }
+                .month{
+                    font-size: 18px;
+                    font-weight: 400;
+                    letter-spacing: 3px;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+    .plan-feature{
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+            font-size: 18px;
+            padding: 15px 0;
+            transition: all 0.3s ease-in-out 0s;
+            }
+        }
+    }
+    .plan-price-div{
+        margin: 20px 0 32px;
+    }
+
+    &:hover, &.active{
+        @include box-shadow(0, 2px, 16px, rgba(0,0,0,0.2));
+
+        .head-bg{
+            border-color: $primarycolor rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) $primarycolor !important;
+            color: $white !important;
+        }
+        .head{
+            color: $white !important;
+        }
+    }
+}
+/* End Plan Page */
