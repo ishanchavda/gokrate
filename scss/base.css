@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
 .roboto-font {
   font-family: "Roboto", sans-serif !important;
 }
 
 .poppins-font {
   font-family: "Poppins", sans-serif !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
 }
 
 .btn-outline-primary {
@@ -14,10 +19,10 @@
   padding-right: 1.5rem;
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
   background-color: rgba(46, 51, 115, 0.2);
   color: #2e3373;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .btn-primary {
@@ -30,7 +35,7 @@
   box-shadow: 0 0px 8px rgba(255, 255, 255, 0.4) ;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #2e3373;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -71,6 +76,14 @@ body {
   font-weight: 600;
   line-height: 28px;
   font-family: "Poppins", sans-serif;
+  margin-right: 0;
+}
+
+.custom-menu .navbar-toggler {
+  padding: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .custom-menu .navbar-toggler .line {
@@ -82,14 +95,36 @@ body {
 }
 
 .custom-menu .navbar-nav .nav-item .nav-link {
-  padding: 18px;
   color: #333333;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.custom-menu .navbar-nav .nav-item .nav-link.active, .custom-menu .navbar-nav .nav-item .nav-link:hover {
+.custom-menu .navbar-nav .nav-item .nav-link:hover {
   background-color: rgba(46, 51, 115, 0.2);
   color: #2e3373;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.custom-menu .navbar-nav .nav-item.active a {
+  background-color: rgba(46, 51, 115, 0.2);
+  color: #2e3373;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  #login-btn {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: auto;
+  }
+  .collapse {
+    padding-left: 20px;
+  }
+  .nav-link {
+    padding: 18px 16px !important;
+  }
 }
 
 /* End Navbar*/
@@ -99,6 +134,7 @@ body {
   padding: 24px 24px 30px;
   cursor: pointer;
   margin-bottom: 20px;
+  height: 100%;
 }
 
 .card .img-reponsive {
@@ -159,11 +195,12 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  font-size: 18px;
 }
 
 /* End Banner*/
 main {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .work-section {
@@ -227,14 +264,24 @@ footer {
   padding-top: 40px;
 }
 
+footer .uf-div {
+  padding-bottom: 20px;
+}
+
 footer .footer-title {
-  padding-bottom: 12px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 footer p {
   padding: 2px 0;
   font-size: 14px;
   margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer p:hover {
+  color: #ffffff;
 }
 
 footer ul {
@@ -248,18 +295,18 @@ footer ul li {
 
 footer ul li a {
   font-size: 14px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 footer ul li a:hover {
   color: #ffffff;
 }
 
-footer .link li {
+footer .social li {
   display: inline-block;
 }
 
-footer .link li a {
+footer .social li a {
   font-size: 24px;
   margin-right: 16px;
 }
@@ -281,7 +328,40 @@ footer .lower-footer p a {
 }
 
 /* End Footer*/
+/* Login Modal */
+#login-modal .modal-dialog {
+  max-width: 400px;
+  margin-top: 100px;
+}
+
+#login-modal .login-wrapper, #login-modal .register-wrapper {
+  padding: 24px 20px;
+}
+
+#login-modal .login-wrapper .modal-title, #login-modal .register-wrapper .modal-title {
+  margin-bottom: 28px;
+  line-height: 1;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+#login-modal .login-wrapper label, #login-modal .register-wrapper label {
+  margin-bottom: .25rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#login-modal .login-wrapper .lgn-btn, #login-modal .register-wrapper .lgn-btn {
+  width: 100%;
+}
+
+/* End Login Modal */
 /* Plan Page */
+.plan-section {
+  padding-top: 20px;
+}
+
 .plan-main {
   overflow: hidden;
   position: relative;
@@ -385,6 +465,10 @@ footer .lower-footer p a {
   margin: 20px 0 32px;
 }
 
+.plan-main .plan-price-div .btn {
+  padding: 10px 40px;
+}
+
 .plan-main:hover, .plan-main.active {
   -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2) ;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2) ;
@@ -400,4 +484,149 @@ footer .lower-footer p a {
 }
 
 /* End Plan Page */
+/*  About Page */
+.about-section {
+  height: 300px;
+  background: url("../img/about_banner.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-section h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.start-section {
+  padding: 32px 0;
+}
+
+.trust-section {
+  padding: 32px 0;
+  position: relative;
+}
+
+.trust-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0px;
+  height: 100%;
+  background-color: rgba(46, 51, 115, 0.05);
+  z-index: -1;
+}
+
+/* End About Page */
+/*  Contact Page */
+.contact-section {
+  height: 300px;
+  background: url("../img/contact_banner.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-section h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form {
+  padding: 32px 0;
+}
+
+/* End Contact Page */
+/* Faqs Page */
+.faqs-section {
+  height: 300px;
+  background: url("../img/faqs_banner.jpg") center center no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.faqs-section h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+}
+
+.question-section {
+  padding: 32px 0;
+}
+
+.question-section .card {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  height: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+  border: none;
+}
+
+.question-section .card .card-header {
+  padding: 10px 0;
+  background: none;
+  font-weight: 500;
+}
+
+.question-section .card .card-header a {
+  color: #2e3373;
+}
+
+.question-section .card .collapse {
+  padding: 0;
+}
+
+.question-section .card .collapse .card-body {
+  color: #333333;
+}
+
+/* End Faqs Page */
 /*# sourceMappingURL=base.css.map */

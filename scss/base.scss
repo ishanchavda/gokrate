@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
-$white:#ffffff;
+$white: #ffffff;
 $lightwhite: #fafafa;
 $lightblack: #333333;
 $primarycolor: #2e3373;
@@ -10,7 +11,7 @@ $roboto: 'Roboto', sans-serif;
 
 .roboto-font { font-family: 'Roboto', sans-serif!important; }
 .poppins-font { font-family: 'Poppins', sans-serif!important; }
-
+.mb-20 { margin-bottom: 20px!important;}
 
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
     -webkit-box-shadow:$top $left $blur $color #{$inset};
@@ -23,10 +24,11 @@ $roboto: 'Roboto', sans-serif;
     color: $primarycolor;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    &:hover,&:focus,{
+
+    &:hover,&:focus,&:active{
         background-color: rgba($primarycolor, 0.2);
         color: $primarycolor;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 
@@ -38,7 +40,7 @@ $roboto: 'Roboto', sans-serif;
     padding-right: 1.5rem;
     @include box-shadow( 0, 0px, 8px, rgba($white, 0.4));
 
-    &:hover,&:focus,{
+    &:hover,&:focus,&:active{
         background-color: $primarycolor;
         box-shadow: none;
     }
@@ -77,8 +79,12 @@ body{
         font-weight: 600;
         line-height: 28px;
         font-family: $popins;
+        margin-right: 0;
     }
+
     .navbar-toggler {
+        padding: 0;
+        order: -1;
         .line{
             width:28px; 
             height: 2px;
@@ -87,22 +93,44 @@ body{
             margin: 5px 0; 
         }
     }
+
     .navbar-nav{
         .nav-item{
             .nav-link{
-                padding: 18px;
                 color: $lightblack;
-                    &.active,&:hover{
-                        background-color: rgba($primarycolor, 0.2);
-                        color: $primarycolor;
-                        font-weight: 600;
-                    }
+                padding-left: 12px;
+                padding-right: 12px;
+
+                &:hover{
+                    background-color: rgba($primarycolor, 0.2);
+                    color: $primarycolor;
+                    font-weight: 500;
+                }
+            }
+
+            &.active{
+                a{
+                    background-color: rgba($primarycolor, 0.2);
+                    color: $primarycolor;
+                    font-weight: 500;
+                }
             }
         }
 
     }
 }
-
+@media screen and (min-width:768px){
+    #login-btn {
+        order: 1;
+        margin-left: auto;
+    }
+    .collapse{
+        padding-left: 20px;
+    }
+    .nav-link{
+        padding:18px 16px !important;
+    }
+}
 /* End Navbar*/
 
 /* Home Page*/
@@ -111,6 +139,7 @@ body{
     padding: 24px 24px 30px;
     cursor: pointer;
     margin-bottom: 20px;
+    height: 100%;
 
     .img-reponsive{
         height: 100px;
@@ -167,14 +196,17 @@ body{
             min-width: 240px;
             padding-top: 10px;
             padding-bottom: 10px;
-            text-align: center;    
+            text-align: center;
+            font-size: 18px;   
         }
     }
 }
 /* End Banner*/
+
 main {
-    padding-top: 80px;
+    padding-top: 60px;
 }
+
 .work-section{
     padding: 32px 0 32px;
 }
@@ -182,6 +214,7 @@ main {
 .benefit-section{
     padding: 32px 0 32px;
     position: relative;
+
     &::before{
         content: '';
         position: absolute;
@@ -205,6 +238,7 @@ main {
 .shoping-info-section{
     padding: 32px 0 32px;
     position: relative;
+
     &::before{
         content: '';
         position: absolute;
@@ -215,6 +249,7 @@ main {
         background-color: rgba($primarycolor, 0.05);
         z-index: -1;
     }
+
     .row{
         flex-wrap: wrap-reverse; 
         
@@ -223,9 +258,7 @@ main {
         }
     }
 }
-
 /* End Homepage*/
-
 
 /* Footer*/
 footer{
@@ -233,14 +266,23 @@ footer{
     color: $white;
     padding-top:40px;
 
+    .uf-div{
+        padding-bottom: 20px;
+    }
+
     .footer-title{
-        padding-bottom: 12px; 
+        font-size: 18px;
+        font-weight: normal;
     }
     
     p{
         padding: 2px 0;
         font-size: 14px;
         margin-bottom: 0;
+        color: rgba($white, 0.8);
+        &:hover{
+            color: $white;
+        }
     }
     
     ul {
@@ -250,14 +292,14 @@ footer{
             padding: 2px 0;
             a{
                 font-size: 14px;
-                color: $white;
+                color: rgba($white, 0.8);
                 &:hover{
                     color: $white;
                 }
             }
         }
     }
-    .link {
+    .social {
         li {
             display: inline-block;
             a{
@@ -269,12 +311,10 @@ footer{
     .lower-footer {
         border-top: 1px solid rgba($white, 0.4);
         background-color: #222;
-
         p{
             font-size: 12px;
             margin-bottom: 0;
             padding: 8px 0;
-
             a{
                 text-decoration: underline;
                 color: $white;
@@ -283,11 +323,41 @@ footer{
         
     }
 }
-
 /* End Footer*/
+/* Login Modal */
+#login-modal{
+    .modal-dialog{
+        max-width: 400px;
+        margin-top: 100px;
+    }
+    
+    .login-wrapper, .register-wrapper{
+        padding: 24px 20px;
+    
+        .modal-title {
+            margin-bottom: 28px;
+            line-height: 1;
+            font-size: 32px;
+            font-weight: 500;
+            font-family: $popins;
+        }
 
+        label {
+            margin-bottom: .25rem;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .lgn-btn{
+            width: 100%;
+        }
+    }
+}
+/* End Login Modal */
 
 /* Plan Page */
+.plan-section{
+    padding-top: 20px;
+}
 .plan-main{
     overflow: hidden;
     position: relative;
@@ -377,6 +447,9 @@ footer{
     }
     .plan-price-div{
         margin: 20px 0 32px;
+        .btn {
+            padding: 10px 40px;
+        }
     }
 
     &:hover, &.active{
@@ -392,3 +465,112 @@ footer{
     }
 }
 /* End Plan Page */
+
+/*  About Page */
+.about-section {
+    height: 300px;
+    background: url('../img/about_banner.jpg') center center no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        color: $white;
+        font-size: 32px;
+        font-family: $popins;
+    }
+}
+.info-div{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+.start-section{
+    padding: 32px 0;
+}
+.trust-section{
+    padding: 32px 0;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0px;
+        height: 100%;
+        background-color: rgba($primarycolor, 0.05);
+        z-index: -1;
+    }
+}
+/* End About Page */
+
+/*  Contact Page */
+.contact-section {
+    height: 300px;
+    background: url('../img/contact_banner.jpg') center center no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        color: $white;
+        font-size: 32px;
+        font-family: $popins;
+    }
+}
+.contact-form{
+    padding: 32px 0;
+}
+/* End Contact Page */
+
+/* Faqs Page */
+.faqs-section {
+    height: 300px;
+    background: url('../img/faqs_banner.jpg') center center no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        color: $white;
+        font-size: 32px;
+        font-family: $popins;
+    }
+}
+.question-section {
+    padding: 32px 0;
+    .card{
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        height: 100%;
+        box-shadow: none;
+        background:none;
+        border:none;
+        .card-header{
+            padding: 10px 0;
+            background: none;
+            font-weight: 500;
+            a{
+                color: $primarycolor;
+            }
+        }
+        .collapse{
+            padding: 0;
+            .card-body{
+                color: $lightblack;
+            }
+        }
+    }
+}
+/* End Faqs Page */

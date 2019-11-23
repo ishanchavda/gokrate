@@ -17,35 +17,41 @@
 
 </head>
 <body>
+
 <header>
     <nav class="navbar navbar-expand-md fixed-top custom-menu ">
-    <a class="navbar-brand" href="#">Gokrate</a>
+    <a class="navbar-brand" href="index.html">Gokrate</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
     </button>
+
+    <button type="button" class="btn btn-outline-primary" id="login-btn">Login</button>
+
+
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link" href="#">Package</a>
+                    <a class="nav-link" href="package.html">Package</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Plans</a>
+                <a class="nav-link" href="plan.html">Plans</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">FAQs</a>
+                <a class="nav-link" href="faq.html">FAQs</a>
             </li>   
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a>
             </li>   
         </ul>
         <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-outline-primary ml-auto" data-toggle="modal" data-target="#myModal">Login</button>
-    </div>  
+    </div> 
+
     </nav>
 </header>
 
@@ -162,7 +168,7 @@
             <h2 class="header-title text-left poppins-fonts prl-15">Gokrate</h2>
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="about">
+                    <div class="about uf-div">
                         <h4 class="footer-title">Links</h4>
                         <ul>
                             <li><a href="">Home</a></li>
@@ -172,20 +178,22 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="about">
+                    <div class="contact uf-div">
                         <h4 class="footer-title">Contact</h4>
-                        <p>+91 12345 67890</p>
-                        <p>info@gokrate.com</p>
-                        <p>www.gokrate.com</p>       
+                        <ul>
+                            <li><a href="tel:+919090990909" target="_blank"><i class="fas fa-phone"></i> +91 90909 90909</a></li>                            
+                            <li><a href="mailto:info@gokrate.com" target="_blank"><i class="fas fa-envelope"></i> info@gokrate.com</a></li>
+                            <li><a href="wwww.gokrate.com" target="_blank"><i class="fas fa-globe-asia"></i> www.gokrate.com</i></a></li>
+                        </ul>      
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="link">
+                    <div class="social uf-div">
                         <h4 class="footer-title">Follow us</h4>
                         <ul>
-                            <li><a href=""><i class="fab fa-facebook-square"></i></a></li>                            
-                            <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>                            
+                            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
                         </ul>        
                     </div>
                 </div>
@@ -198,6 +206,71 @@
 
 </footer>
 
+<!-- The Login Modal -->
+<div class="modal" id="login-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body login-wrapper">
+                    <h3 class="modal-title text-center">Log in</h3>
+                    <form action="" class="login-form">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                            <p class="error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <p class="error"></p>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                            <a href="" class="float-right"><small class="forgot-link">forgot password ?</small></a>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary lgn-btn">Login</button>
+                        </div>
+                        <div class="form-group text-center">
+                            Don't have an account? <a href="" class="btn-btn-link" id="go-signup">Sign up</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-body register-wrapper">
+                        <h3 class="modal-title text-center">Create Account</h3>
+                        <form action="" class="login-form">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                                <p class="error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <p class="error"></p>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> Remember me
+                                </label>
+                                <a href="" class="float-right"><small class="forgot-link">forgot password ?</small></a>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary lgn-btn">Signup</button>
+                            </div>
+                            <div class="form-group text-center">
+                                Alredy have an account? <a href="" class="btn-btn-link" id="go-signin">Sign in</a>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="./js/custom.js"></script>
 
 </body>
 </html>
